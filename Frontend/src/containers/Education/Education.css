@@ -1,0 +1,170 @@
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 30px auto;
+  z-index: 1;
+  margin-top: 2%;
+}
+
+.edcontainer {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+.edcontainer img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -28px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.edcontainer img:hover {
+  box-shadow: none;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.edcontainer:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.edcontainer:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.edcontainer:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.edcontainer:nth-child(4) {
+  animation-delay: 4s;
+}
+
+.text-box {
+  border: 1px solid black;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background: white;
+  color: black;
+}
+.text-box h2 {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.left-edcontainer {
+  left: 0%;
+}
+.left-edcontainer .left-edcontainer-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid black;
+  right: 30px;
+}
+
+.right-edcontainer {
+  left: 50%;
+}
+.right-edcontainer img {
+  left: -20px;
+}
+
+.right-edcontainer-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid black;
+  left: 30px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 6s linear ease-in-out;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0%;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  100% {
+    height: 100%;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .edcontainer {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .text-box small {
+    margin-bottom: 10px;
+  }
+  .right-edcontainer {
+    left: 0;
+  }
+  .left-edcontainer img,
+  .right-edcontainer img {
+    left: 10px;
+  }
+  .right-edcontainer-arrow {
+    border-right: 1px solid transparent;
+  }
+}/*# sourceMappingURL=Education.css.map */

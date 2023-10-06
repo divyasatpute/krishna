@@ -1,0 +1,43 @@
+// lol
+.app{
+  margin:0;
+  padding: 0;
+}
+
+.noise::before{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  z-index: 1500;
+  pointer-events: none;
+  // background:url();
+}
+
+// lol
+.app__container {
+    width: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    flex-direction: row;
+  }
+  
+   .app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem 2rem;
+    }
+  }
