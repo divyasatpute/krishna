@@ -13,6 +13,7 @@ const Works = () => {
   const [animation, setAnimate] = useState({ y: 0, opacity: 1 });
   const [works, setworks] = useState([]);
   const [filterwork, setFilterWork] = useState([]);
+  const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
     const query = '*[_type=="project"]';
@@ -67,7 +68,7 @@ const Works = () => {
         <div className="project-page-container">
           <div className="project-page-items">
             {filterwork.map((project, index) => (
-              <div className="project-page-item">
+              <div className="project-page-item" key={index}>
                 <div className="project-page-item-number"></div>
                 <a href={project.projectlink} target="_blank">
                   <div className="project-page-item-header">
@@ -76,8 +77,10 @@ const Works = () => {
                       <p>{project.tags[0]}</p>
                     </div>
                   </div>
+                  
                   <div className="project-page-item-image project-page-item-image1">
                     <img src={urlFor(project.imgUrl)} />
+                    
                   </div>
                   <div className="project-page-item-footer-git">
                     <p>{project.description}</p>

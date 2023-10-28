@@ -4,11 +4,12 @@ import {
   Footer,
   Header,
   Skills,
+  Merger,
   Testinomals,
   Work,
   Home,
   Education,
-  Certificate
+  Certificate,
 } from "./containers";
 import { Navbar } from "./components";
 import "./App.scss";
@@ -28,7 +29,7 @@ const App = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/educations" element={<Education />} />
             <Route path="/testinomals" element={<Testinomals />} />
-            <Route path="/footer" element={<Footer />} />
+            <Route path="/footer" element={<Merger/>} />
             <Route path="/certificate" element={<Certificate />} />
           </Routes>
         </div>

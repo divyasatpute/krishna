@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Home.scss";
 import { images } from "../../constants";
-import { Link } from "react-router-dom";
 import { About, Education, Footer, Testinomals, Work } from "../../containers";
 import { Skills } from "../../containers";
-
+import { Link, NavLink } from "react-router-dom";
 function Home() {
   return (
     <div className="home">
@@ -130,7 +129,9 @@ function Home() {
               <a href="#" class="link-1" onClick={()=>{window.location.reload(false)}}>
                 Home
               </a>
-              <a href="#">Contact</a>
+              <a>
+              <NavLink to="/footer">Contact</NavLink>
+              </a>
             </p>
 
             <p class="footer-company-name">2023 © Edition</p>
@@ -149,14 +150,15 @@ function Home() {
               <p>9922379106</p>
             </div>
 
-            <div>
+            <div className="effectlink">
               <i class="fa fa-envelope"></i>
               <p>
-                <a href="mailto:krishna.kushwaha2312@gmail.com">
+                <a href="mailto:krishna.kushwaha2312@gmail.com" >
                   krishna.kushwaha2312@gmail.com
                 </a>
               </p>
             </div>
+
           </div>
 
           <div class="footer-right">
@@ -165,21 +167,22 @@ function Home() {
             </p>
 
             <div class="footer-icons">
+            <a href="https://github.com/KKrishna11">
+                <i class="fa fa-github"></i>
+                <img src={images.github} />
+              </a>
+              
+              <a href="https://instagram.com/krishna.k11?igshid=MzNlNGNkZWQ4Mg==">
+                <img src={images.instagramlogo} />
+              </a>
+              <a href="https://www.linkedin.com/in/krishna-kushwaha-a0092922b/">
+                <img src={images.linkedin}  />
+              </a>
               <a href="#">
                 <i class="fa fa-facebook"></i>
                 <img src={images.facebooklogo} />
               </a>
-              <a href="#">
-                <i class="fa fa-twitter"></i>
-                <img src={images.instagramlogo} />
-              </a>
-              <a href="#">
-                <img src={images.linkedin}  />
-              </a>
-              <a href="#">
-                <i class="fa fa-github"></i>
-                <img src={images.github} />
-              </a>
+              
             </div>
           </div>
         </footer>
