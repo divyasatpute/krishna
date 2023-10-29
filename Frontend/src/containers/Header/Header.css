@@ -1,7 +1,6 @@
 body {
   color: #fff;
   overflow-x: hidden;
-  background-color: #141414;
 }
 
 * {
@@ -76,7 +75,6 @@ section {
 }
 
 .boxes-container {
-  background-color: #ffebad;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -93,6 +91,15 @@ section {
   justify-content: center;
 }
 .text-content p {
+  transform: translateY(150px);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 10px;
+  font-weight: 300;
+  color: yellow;
+  padding-bottom: 60px;
+}
+.text-content .changesspan {
   transform: translateY(150px);
   text-transform: uppercase;
   font-size: 12px;
@@ -207,9 +214,92 @@ section {
 
 @media screen and (max-width: 600px) {
   .bbody {
-    /* style ONLY for screens with 360px or less width */
     display: flex;
     overflow: hidden;
-    background-color: aqua;
+    background-color: black;
+  }
+  .video-section video {
+    height: 100px;
+    width: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -2;
+    position: relative;
+  }
+  .img-container {
+    position: absolute;
+    top: 0;
+    height: 10vh;
+    width: 10vw;
+  }
+  .text-content {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-content .changesspan {
+    transform: translateY(150px);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 10px;
+    font-weight: 300;
+    color: yellow;
+    padding-left: 20px;
+    padding-bottom: 60px;
+  }
+  .title {
+    width: 290px;
+    position: relative;
+    height: 110px;
+  }
+  .title span {
+    position: absolute;
+  }
+  .bg {
+    font-size: 70px;
+  }
+  .sm {
+    font-size: 35px;
+    height: 40px;
+  }
+  .left {
+    left: -11%;
+  }
+  .right {
+    top: 50px;
+    left: -12%;
+  }
+  .n {
+    z-index: 2;
+  }
+  .upperText {
+    margin-bottom: 40%;
+  }
+  .direction-by {
+    position: relative;
+    right: 43%;
+    top: 30%;
+  }
+  .direction-of-scrolling {
+    display: flex;
+    position: relative;
+    right: 53%;
+    top: 20%;
+  }
+  .text-container {
+    max-width: 342px;
+  }
+  .text-container p {
+    padding-bottom: 1rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    text-align: justify;
+    opacity: 9;
+    margin-bottom: 2%;
   }
 }/*# sourceMappingURL=Header.css.map */

@@ -5,14 +5,27 @@
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 4rem;
-  margin-left: 5%;
+  margin-left: 6%;
 }
 @media screen and (max-width: 900px) {
   .skills-container {
-    margin-top: 50%;
+    display: flex;
+    margin-top: 30%;
+    margin-left: 2rem;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills-container {
+    display: flex;
+    margin-top: 50%;
+    margin-left: 4rem;
+    align-items: center;
+    justify-content: center;
+    width: 100;
     flex-direction: column;
   }
 }

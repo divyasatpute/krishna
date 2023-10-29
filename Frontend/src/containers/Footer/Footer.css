@@ -1,6 +1,7 @@
 .layout {
   display: flex;
   gap: 16px;
+  margin-bottom: 20%;
   flex-direction: column;
 }
 
@@ -26,7 +27,7 @@
   right: 40%;
   font-size: 20px;
   width: 15em;
-  top: -10%;
+  top: -15%;
   padding: 0.5em;
   text-align: center;
   cursor: pointer;
@@ -73,7 +74,7 @@
   opacity: 1;
 }
 .envelope .content {
-  padding: 2em;
+  padding: 3em;
   box-sizing: border-box;
   position: relative;
   z-index: 9;
@@ -87,12 +88,12 @@
   color: #fff;
 }
 .envelope .top-wrapper {
-  padding: 2em 2em 0;
+  padding: 1em 1em 0;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
 .envelope .bottom-wrapper {
-  padding: 0 2em 2em;
+  padding: 1em 1em 1em;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   transition: all 0.5s ease-in-out;
@@ -112,7 +113,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -10;
 }
 .envelope form label {
   display: block;
@@ -151,6 +152,9 @@
   border-radius: 0.25em;
   cursor: pointer;
 }
+.envelope form .newbuttonseperate {
+  display: none;
+}
 .envelope form .input {
   padding-bottom: 1em;
 }
@@ -159,7 +163,7 @@
   display: block;
   top: 0;
   left: 0;
-  border-bottom-left-radius: 0.5em;
+  border-bottom-left-radius: 0.4em;
   border-bottom-right-radius: 0.5em;
   overflow: hidden;
 }
@@ -245,5 +249,133 @@
     transform: rotateX(180deg);
     z-index: 99;
     position: relative;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flip-card {
+    border-radius: 0.5em;
+    position: absolute;
+    right: 10%;
+    font-size: 20px;
+    width: 15em;
+    top: -3%;
+    padding: 0.5em;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    z-index: 9;
+    margin-top: 5%;
+    pointer-events: none;
+  }
+  .contact-wrapper {
+    position: absolute;
+    top: 7%;
+    width: auto;
+    height: 70vh;
+    overflow: hidden;
+    align-content: center;
+    justify-content: center;
+  }
+  .content {
+    width: 420px;
+    height: auto;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 9;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 1s;
+    right: 5%;
+  }
+  .envelope {
+    background-color: #fff;
+    margin-right: 20%;
+  }
+  .envelope .top-wrapper {
+    padding: 10px;
+    margin: 0%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+  .envelope .bottom-wrapper {
+    padding: 10px;
+    margin: 0%;
+  }
+  .envelope:after {
+    position: absolute;
+    content: "";
+    display: block;
+    opacity: 0;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+  }
+  .envelope .top-wrapper,
+  .envelope .bottom-wrapper {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+  }
+  .envelope .top-wrapper {
+    border-top: 1px solid black;
+  }
+  .envelope .bottom-wrapper {
+    border-bottom: 1px solid black;
+  }
+  .envelope form label {
+    display: block;
+    padding-bottom: 0.5em;
+    background-color: white;
+  }
+  .envelope form input,
+  .envelope form textarea {
+    width: 100%;
+    box-shadow: 0;
+    background: transparent;
+    color: black;
+    font-size: medium;
+    padding-left: 2px;
+  }
+  .envelope form input {
+    border-width: 0 0 0.1em;
+    border-color: black;
+    border-style: solid;
+    font-size: medium;
+    padding-left: 2px;
+  }
+  .envelope form textarea {
+    border: 0.1em solid black;
+    border-radius: 0.25em;
+  }
+  .envelope form .submit-card {
+    background: #fff;
+    color: black;
+    display: none;
+  }
+  .envelope form .input {
+    color: black;
+    padding-bottom: 1em;
+  }
+  .envelope form .newbuttonseperate {
+    display: block;
+    background: #fff;
+    color: black;
+    text-align: center;
+    padding: 0.5em;
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%;
+    border: 2px solid black;
+    box-shadow: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+  }
+  .envelope form .paper {
+    background-color: white;
   }
 }/*# sourceMappingURL=Footer.css.map */

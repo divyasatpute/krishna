@@ -32,9 +32,6 @@
   color: black;
   transform: translateY(-8px);
 }
-.projectwork-filter-item :active {
-  background: olive;
-}
 .projectwork-filter-item .projectwork-filter-item {
   background-color: black;
 }
@@ -65,7 +62,7 @@
 }
 
 .project-page a {
-  color: RED;
+  color: black;
   text-decoration: none;
 }
 
@@ -90,7 +87,8 @@
 
 .project-page-item {
   padding: 60px;
-  width: 600px;
+  width: 500;
+  max-width: 700px;
   transition: transform 0.6s cubic-bezier(0.16, 1.3, 1);
 }
 
@@ -112,7 +110,7 @@
 .project-page-item-header h1 {
   font-size: 15px;
   font-weight: bold;
-  width: 50%;
+  width: 40%;
   text-transform: uppercase;
 }
 
@@ -133,7 +131,7 @@
   border: 1px solid black;
 }
 
-.project-page-item-footer {
+.project-page-item-footer-git {
   display: flex;
   justify-content: space-between;
   width: auto;
@@ -145,16 +143,15 @@
   padding: 8px 8px;
 }
 
-.project-page-item-footer p {
+.project-page-item-footer-git p {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.project-page-item-footer img {
-  width: 15px;
+.project-page-item-footer-git img {
+  width: 28px;
   margin-right: 5px;
-  transform: rotate(270deg);
 }
 
 @media (max-width: 900px) {
@@ -168,17 +165,30 @@
     padding: 50px;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .my-projects {
-    height: 30vh;
+    display: flex;
+    flex-direction: column;
     margin-top: 100px;
+    gap: 2px;
+    width: auto;
+    height: 60vh;
+    align-items: center;
+    justify-self: center;
   }
   .my-projects h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
   .project-page-item {
-    background-color: rebeccapurple;
+    background-color: white;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  .projectwork-filter {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
   }
 }/*# sourceMappingURL=Work.css.map */

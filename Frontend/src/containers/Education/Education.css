@@ -139,6 +139,11 @@
     border-bottom-right-radius: 20px;
   }
 }
+@media screen and (max-width: 900px) {
+  .timeline {
+    margin: 50px auto;
+  }
+}
 @media screen and (max-width: 600px) {
   .timeline {
     margin: 50px auto;
@@ -164,7 +169,12 @@
   .right-edcontainer img {
     left: 10px;
   }
+  .left-edcontainer-arrow {
+    display: none;
+  }
   .right-edcontainer-arrow {
+    display: none;
+    border: none;
     border-right: 1px solid transparent;
   }
 }/*# sourceMappingURL=Education.css.map */
