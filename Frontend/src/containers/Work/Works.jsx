@@ -49,7 +49,7 @@ const Works = () => {
           </div>
           <div>
             <div className="projectwork-filter">
-              {["UI/UX", "Web-App", "Mobile-App", "Design", "All"].map(
+              {["All","UI/UX","Mobile-App","Web-App"].map(
                 (item, index) => (
                   <div
                     key={index}

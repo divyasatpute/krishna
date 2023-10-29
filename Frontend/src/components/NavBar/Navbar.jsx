@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { images } from "../../constants";
 const Navbar = () => {
-  // const [toggle, setToggle] = useState(false);
+ 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+  
   const [open, setOpen] = useState(true);
   const isOpen = () => {
     setOpen(false);
@@ -18,7 +23,7 @@ const Navbar = () => {
       <nav className="merger">
         {/* <span className="borderanim" /> */}
         <Link to="/" className="title">
-          <img src={images.logo} />
+          <img src={images.logo} onClick={refreshPage} />
         </Link>
         <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="nav-img">

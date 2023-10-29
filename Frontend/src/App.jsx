@@ -11,7 +11,7 @@ import {
   Education,
   Certificate,
 } from "./containers";
-import { Navbar } from "./components";
+import { Navbar,Preloader } from "./components";
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <div className="noise"></div>
+        <Preloader/>
         <div className="app">
           <Navbar />
           <Routes>
